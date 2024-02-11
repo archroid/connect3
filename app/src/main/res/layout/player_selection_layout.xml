@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/MainLayout_PlayerSelectionLayout">
+<Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@drawable/gradient_bg_light"
+    android:id="@+id/PlayerSelection_Toolbar"
+    android:title="Player Selection"
+    android:titleTextColor="@color/white"
+    />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_below="@+id/PlayerSelection_Toolbar"
+        android:layout_above="@id/btn_Start"
+        android:background="@drawable/game__main_bg"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="50dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player Name"
+            app:hintTextColor="@color/colorPrimary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/colorPrimary"
+            android:id="@+id/textinputlayout1"
+            >
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:drawableLeft="@drawable/ic_profile"
+                android:singleLine="true"
+                android:drawablePadding="10dp"
+                android:maxLength="15"
+                android:id="@+id/player1_ed_name"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textinputlayout1"
+                android:layout_marginTop="20dp"
+                android:text="Player Color"
+                android:id="@+id/tvColor_p1"
+                android:layout_marginLeft="7dp"
+                android:drawableLeft="@drawable/ic_brush_blue"
+                android:drawablePadding="10dp"
+                />
+        <Spinner
+            android:id="@+id/spinner_player1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/tvColor_p1"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:text="VS"
+            android:textSize="40sp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/supercell"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Player Name"
+                app:hintTextColor="@color/pink"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/pink"
+                android:id="@+id/textinputlayout2">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:drawableLeft="@drawable/ic_account_pink"
+                    android:singleLine="true"
+                    android:drawablePadding="10dp"
+                    android:maxLength="15"
+                    android:id="@+id/player2_ed_name"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Player Color"
+                android:id="@+id/tvColor_p2"
+                android:layout_marginLeft="7dp"
+                android:drawableLeft="@drawable/ic_brush_pink"
+                android:drawablePadding="10dp"
+            android:layout_below="@id/textinputlayout2"
+                />
+            <Spinner
+                android:id="@+id/spinner_player2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tvColor_p2"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/btn_Start"
+        android:text="Start"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_style_2"
+        >
+
+    </androidx.appcompat.widget.AppCompatButton>
+</RelativeLayout>
